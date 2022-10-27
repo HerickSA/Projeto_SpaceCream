@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-heading: 'Staatliches', sans-serif;
+  --ff-texting: 'Palanquin', sans-serif;
+
+  --bg-heading: hsl(218, 17%, 62%);
+  --bg-span-heading: hsl(275, 18%, 79%);
+  --bg-page: hsl(233, 100%, 97%, 1);
+
+  --fc-heading: hsl(0, 0%, 100%);
+  --fc-paragraph: hsl(274, 84%, 12%);
+  --fc-texting-cards: hsl(232, 17%, 35%);
+
+  font-size: 62.5%;
+  --fs-body: 2rem;
+  --fs-heading: 4rem;
+  --fs-texting-cards: 2rem;
+}
+
+body {
+  font-family: var(--fs-body);
+  min-width: 38rem;
+
+  color: var(--fc-paragraph);
+
+  font-size: var(--fs-body);
+}
+
+.page {
+  max-width: 38rem;
+  margin: 0 auto;
+  background-color: var(--bg-page);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  max-width: 38.5rem;
+  height: 28rem;
+  background-color: var(--bg-heading);
+}
+
+header img {
+  padding: 3.2rem 12.4rem;
+  filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.25));
+  filter: saturate(3.5);
+}
+
+header span {
+  display: flex;
+  padding: 0.7rem 8.6rem;
+  align-items: center;
+  background: var(--bg-span-heading);
+}
+
+header h1 {
+  margin: auto;
+  font-family: var(--ff-heading);
+  color: var(--fc-heading);
+  font-weight: 400;
+  font-size: var(--fs-heading);
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+main {
+  display: grid;
+  background-color: var(--bg-page);
+  justify-content: center;
+  padding: 1.4rem 0 6rem;
+  margin: 0 3.2rem;
+  gap: 3rem;
+
+}
+
+main p {
+  font-family: var(--ff-texting);
+  font-weight: 400;
+  font-size: var(--fs-body);
+  line-height: 15px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--fc-paragraph);
+
+  padding: 0 4rem 6.3rem;
+}
+
+.card {
+  position: relative;
+  font-family: var(--ff-heading);
+  font-weight: 400;
+  font-size: var(--fs-texting-cards);
+  line-height: 32px;
+  margin: auto;
+
+  letter-spacing: 0.05em;
+
+  color: var(--fc-texting-cards);
+}
+
+.card h2 {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  font-size: var(--fs-texting-cards);
+  font-weight: 400;
+  line-height: 3.2rem;
+
+  letter-spacing: 0.05em;
+
+}
+
+.card img {
+  border-radius: 20px;
+  object-fit: cover;
+
+  transition: all 400ms;
+  filter: saturate(2.5);
+  animation: scaleIn 700ms 350ms backwards;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.card h2 span {
+  background-color: var(--bg-span-heading);
+  display: flex;
+  height: 3.5rem;
+
+  padding: 0.1rem 2.3rem 0;
+  background: var(--bg-span-heading);
+  border-radius: 20px;
+  filter: saturate(1.5);
+  animation: scaleIn 700ms 350ms backwards;
+
+ }
+
+.fr1 {
+  width: 320px;
+  height: 250px;
+}
+
+.fr2 {
+  width: 320px;
+  height: 450px;
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
